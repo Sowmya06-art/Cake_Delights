@@ -1,0 +1,98 @@
+<!-- cart.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yumbag - Shopping Cart</title>
+<!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url("https://img.goodfon.com/wallpaper/big/0/4d/macaroon-colorful-makaruny-sweet-macaron-french-sladkoe-d-23.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial,cursive;
+        }
+         .content {
+            text-align: center;
+        }
+h1 {
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+#cart-items {
+            margin-top: 20px;
+        }
+#cart-items ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #cart-items li {
+            margin-bottom: 10px;
+        }
+
+
+        /* Add your custom styles here */
+        /* ... (other existing styles) ... */
+    </style>
+</head>
+<body>
+   
+    <h1 class="text-center">Yumbag</h1>
+<div class="content">
+ <div id="cart-items"></div>
+    <p id="total-amount"></p>
+<button class="btn btn-danger" onclick="clearCart()">Clear Cart</button>
+</div>
+    <script>
+    // Retrieve cart items from localStorage
+    const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+    // Display cart items
+    const cartItemsContainer = document.getElementById('cart-items');
+    if (cartItems.length === 0) {
+        cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+        cartItemsContainer.innerHTML = '<p>Cart Items:</p>';
+        const ul = document.createElement('ul');
+        cartItems.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = `${item.quantity} ${item.productName}(s) - ₹${item.price * item.quantity}`;
+            ul.appendChild(li);
+        });
+        cartItemsContainer.appendChild(ul);
+    }
+
+    // Display total amount
+    const totalAmountContainer = document.getElementById('total-amount');
+    const totalAmount = cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    totalAmountContainer.innerText = `Total Amount: ₹${totalAmount}`;
+// Clear cart function
+        function clearCart() {
+            localStorage.removeItem('cartItems');
+            cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+            totalAmountContainer.innerText = 'Total Amount: ₹0';
+        }
+
+</script>
+<script>
+        // Retrieve cart items from sessionStorage and display them
+        const cartItems = JSON.parse(sessionStorage.getItem('cart')) || [];
+        const cartItemsContainer = document.getElementById('cart-items');
+
+        cartItems.forEach(item => {
+            const itemDiv = document.createElement('div');
+            itemDiv.innerHTML = `<h2>${item.name}</h2><p>${item.description}</p>`;
+            cartItemsContainer.appendChild(itemDiv);
+        });
+    </script>
+
+</body>
+</html>

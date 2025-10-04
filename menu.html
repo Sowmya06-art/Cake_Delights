@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url("https://img.freepik.com/free-photo/concept-homemade-baking-is-whisk-whipping-cupcake-molds-pink-background-zero-waste-copy-space-top-view-baking-concept-flat-lay_127032-2347.jpg") center center fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }           
+ .cake-card {
+            width:95%;
+            height:95%;
+            margin-bottom: 20px;
+            background-color: rgba(255, 255, 255, 0.3); /* Background color for the card */
+            border-radius: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+        }
+ .cake-card:hover {
+            transform: scale(1.03); /* Increase the size on hover */
+        }
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            width: 300px;
+            margin-right: 10px;
+        }
+.footer {
+    background-color: #343a40; /* Choose a color that complements your design */
+    color: #ffffff;
+    padding: 20px 0;
+}
+
+.footer h4 {
+    color: #ffffff;
+}
+
+.footer p {
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+    </style>
+</head>
+<body>
+<!--Navigation Bar-->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">CAKE DELIGHTS</a>
+    <!-- Add the search bar to the right of the navbar -->
+    <div class="ml-auto search-bar">
+        <input type="text" class="form-control search-input" placeholder="Search...">
+        <button class="btn btn-outline-light" type="button">
+            <i class="fas fa-search"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Cake is not just a dessert, it's a symbol of joy,love, and celebrations.
+</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Menu <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="cake.html">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Log In</a>
+            </li>
+<li class="nav-item">
+                
+        <a class="nav-link" href="cart.html"><i class="fa fa-shopping-cart" style="font-size:20px;color:white"></i></a>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- Product Listing Section -->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://www.giftmyemotions.com/image/cache/floralnation/amazone/0138-800x800.jpg" alt="Cake Image">
+                <div class="card-body">
+                    <h5 class="card-title">Chocolate Cake</h5>
+                    <p class="card-text">Rich and decadent chocolate cake.</p>
+                    <p clas="card-text">Chocolate cake is Pure Bliss; a taste of Heaven.</p>
+<p clas="card-text">The cake has a soft crumb but it is sturdy enough for stacking and carving.</p>
+ <p class="card-text">₹600</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                  <a href="#" class="btn btn-primary" onclick="addToYumbag('Chocolate Cake', 600, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://res.cloudinary.com/insignia-flowera-in/images/f_auto,q_auto/v1688048060/Vanilla-creamy-cake_72013d7d5/Vanilla-creamy-cake_72013d7d5.jpg" alt="Cake Image">
+                <div class="card-body">
+                    <h5 class="card-title">Vanilla Cake</h5>
+                    <p class="card-text">Classic and delicious vanilla cake.</p>
+                    <p class="card-text">This adds a Warming,Sweet and Rounded flavour that Compliments anything it's added to.</p>
+                    <p class="card-text">Extra flavor from pure vanilla extract</p>
+                    <p class="card-text">₹700</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                    <a href="#" class="btn btn-primary" onclick="addToYumbag('Vanilla Cake', 700, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://media.istockphoto.com/id/1344684639/photo/delicious-homemade-red-velvet-cake.jpg?s=612x612&w=0&k=20&c=vysz7N11IecZdYQYl2is8PwaKSMKVKF9WNbfDnADEKA=" alt="Cake Image">
+                <div class="card-body">
+                    <h5 class="card-title">Red Velvet Cake</h5>
+                    <p class="card-text">Velvety and indulgent red velvet cake.</p>
+<p class="card-text">Life is like a piece of red velvet cake: sometimes it's sweet, sometimes it's heavenly, other times it is too much, but it's always worth devouring.</p>
+                    <p class="card-text">₹1000</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+<a href="#" class="btn btn-primary" onclick="addToYumbag('Red Velvet Cake', 1000, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://www.hotbreads.co.in/cdn/shop/products/0I4A5482copy_1000x1000.jpg?v=1641168612" alt="Cake Image">
+
+                <div class="card-body">
+                    <h5 class="card-title">Butterscotch Cake</h5>
+                    <p class="card-text">Crunchy and Buttery taste of Butterscotch Caramel Cakes melts in your Mouth and Warm your Soul.</p>
+<p class="card-text">The sponge cake is flavored with butterscotch essence.</p>
+                    <p class="card-text">₹1000</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                    <a href="#" class="btn btn-primary" onclick="addToYumbag('Butterscotch Cake', 1000, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+     <div class="col-md-4">
+<div class="card cake-card">
+                <img src="https://img.cakeway.in/products/93fc4b97_3-tier-black-forest-cake_1.jpg">
+
+                <div class="card-body">
+                    <h5 class="card-title">Black Forest Step Cake</h5>
+                    <p class="card-text">Black Forest Step Cake is made of layers of Moist Chocolate cake, Cherries, and Soft Whipped Cream.</p>
+                    <p class="card-text">This adds a Warming,Sweet and Rounded flavour that Compliments anything it's added to.</p>
+                    <p class="card-text">₹1500</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Black Forest Step Cake', 1500, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://assets.winni.in/product/primary/2022/9/73524.jpeg?dpr=1&w=500" alt="Cake Image">
+                <div class="card-body">
+                    <h5 class="card-title">Pineapple Cake</h5>
+                    <p class="card-text">Delicious and juicy Pineapple Cake that can give you a chance to enjoy the taste of a real cake with fresh pineapple slices and cream.</p>
+                    <p class="card-text">₹250</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Pineapple Cake', 250, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://i0.wp.com/www.bakingbond.co.in/wp-content/uploads/2022/11/Black_Forest_Cake_05.jpg?fit=520%2C520&ssl=1" alt="Cake Image">
+                <div class="card-body">
+                    <h5 class="card-title">Black Forest Cake</h5>
+                    <p class="card-text">Black Forest Cake combines rich chocolate cake layers with fresh cherries, cherry liqueur, and a simple whipped cream frosting.</p>
+                    <p class="card-text">₹1100</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Black Forest Cake', 1100, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://natashaskitchen.com/wp-content/uploads/2020/05/Vanilla-Cupcakes-2-728x485.jpg" alt="Cake Image">
+                <div class="card-body">
+                    <h5 class="card-title">Vanilla CupCake</h5>
+                    <p class="card-text">Vanilla Cupcakes have a deliciously sweet vanilla flavor with a texture that's wonderfully soft and moist.</p>
+<p class="card-text">Decorated with your favorite vanilla frosting.</p>
+<p class="card-text">Each piece of this cup cake can really help people to reach the highest peak of dessert joy.</p>
+
+                    <p class="card-text">₹500</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Vanilla Cupcakes', 500, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://www.cookwithnabeela.com/wp-content/uploads/2024/02/OreoCupcakes.webp">
+                <div class="card-body">
+                    <h5 class="card-title">Orea CupCake</h5>
+                    <p class="card-text">Oreo Cupcakes with Cookies & Cream Oreo Frosting are decadent, delicious, and so much fun. These cupcakes are perfect for birthday parties!</p>
+                    <p class="card-text">₹600</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                    <a href="#" class="btn btn-primary" onclick="addToYumbag('Oreo Cupcakes', 600, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+
+<div class="container mt-4">
+    <div class="row">
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://truecakes.in/cdn/shop/products/RasmalaiCake.jpg?v=1678961552">
+                <div class="card-body">
+                    <h5 class="card-title">Rasmalai Cake</h5>
+                    <p class="card-text">Luscious and Watery Rasmalai cake.</p>
+                    <p class="card-text">The base is usually a soft and moist sponge cake, layered with Rasmalai-infused cream and garnished with pieces of Rasmalai, saffron strands, and chopped nuts.</p>
+                    <p class="card-text">₹900</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                    <a href="#" class="btn btn-primary" onclick="addToYumbag('Rasmalai Cake', 900, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+<div class="col-md-4">
+            <div class="card cake-card">
+<img src="https://justbakedcake.com/wp-content/uploads/2020/09/strawberry-gateaux-1.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Soft and Yummy Strawberry Cake</h5>
+                    <p class="card-text">You will fall in love with this fresh Strawberry Cake.</p>
+                    <p class="card-text">It's moist, tender, and beautifully pink!and perfect dessert for spring & summer.
+</p>
+                    <p class="card-text">₹700</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Strawberry Cake', 700, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>      
+
+
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://www.greatbritishfoodawards.com/assets/images/recipes/PoisonApple_Cake_030-web.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Healthy Apple Cake</h5>
+                    <p class="card-text"> Grating the Apples into this Apple cake also Retains the Moisture, packs in the Flavor.</p>
+                    <p class="card-text">₹950</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                    <a href="#" class="btn btn-primary" onclick="addToYumbag('Apple Cake', 950, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>   
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://bakewithshivesh.com/wp-content/uploads/2021/05/IMG_8570-scaled.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Rainbow Cake</h5>
+                    <p class="card-text"> Magical Rainbow cake.</p>
+                    <p class="card-text">Just like Rainbow Colours,this Cake have Seven different flavours with each new Bite.</p>
+                    <p class="card-text">₹1950</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Rainbow Cake', 1950, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>  
+ <div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://realhousemoms.com/wp-content/uploads/Mini-Raspberry-Mousse-Cakes-RECIPE-CARD.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Raspberry Mousse Cake</h5>
+                    <p class="card-text">The tangy sweet raspberry mousse over the Russian sponge cake.</p>
+<p class="card-text">This layered raspberry mousse cake has a chewy chocolate brownie cake layer, light and fresh raspberry mousse, and gets covered in a glossy dark chocolate ganache.</p>
+                    <p class="card-text">₹1050</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Raspberry Mousse Cake', 1050, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+</div>
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://www.elloras.in/cdn/shop/products/42-min-min_42_11zon.jpg?v=1660808320">
+
+                <div class="card-body">
+                    <h5 class="card-title">Baked Blueberry Cheese Cake</h5>
+                    <p class="card-text"> Elusive light-yet-rich creamy cheesecake filling, studded with blueberries inside and smothered in an incredible glossy blueberry sauce topping.</p>
+                    <p class="card-text">₹600</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                    <a href="#" class="btn btn-primary" onclick="addToYumbag('Baked Blueberry Chesse Cake', 950, 1)">Add to Yumbag</a> 
+</div>
+            </div>
+        </div>
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmb-Mmq6ewwWyhTj6rqU7pFIX4w-iq8dcgWA&usqp=CAU">
+                <div class="card-body">
+                    <h5 class="card-title">Red Velvet Brownies </h5>
+                    <p class="card-text">These brownies are super delicious and are topped with a drizzle of white chocolate.</p>
+                    <p class="card-text">they’re slightly chocolatey, slightly tangy, soft, and fudgy.</p>
+<p class="card-text">₹600</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+<br/>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Red Velvet Brownies', 850, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://gurgaonbakers.com/wp-content/uploads/2021/01/chocolate-truffle-jar-cake.jpg">
+                <div class="card-body">
+                    <h5 class="card-title">Chocolate Truffle Jar Cakes </h5>
+                    <p class="card-text">This layered chocolate truffle cake is super decadent chocolate. It is filled with chocolate frosting and swirled in melted Lindt truffles.</p>
+                    <p class="card-text">₹600</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+</br>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Chocolate Chocolate Truffle Jar Cakes', 960, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+<div class="col-md-4">
+            <div class="card cake-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnZh0kE-WAiqQbfxr0vZApqSmDNJx5jAWWBw&s">
+                <div class="card-body">
+                    <h5 class="card-title">Unicorn Theme cake </h5>
+                    <p class="card-text">This elegant unicorn cake features a white and gold colour scheme, adding a touch of sophistication to any celebration while still showcasing a playful unicorn.</p>
+                    <p class="card-text">₹850</p>
+<div class="quantity-input">
+                <label for="quantity">Kilograms(Kgs):</label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text quantity-icon"><i class="fas fa-birthday-cake"></i></span>
+                    </div>
+                    <input type="number" class="form-control" id="quantity" value="1">
+                </div>
+            </div>
+</br>
+                   <a href="#" class="btn btn-primary" onclick="addToYumbag('Chocolate Chocolate Truffle Jar Cakes', 960, 1)">Add to Yumbag</a>
+                </div>
+            </div>
+        </div>
+<footer class="footer mt-4" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Contact Us</h4>
+                <p>Email: info@cakedelights.com</p>
+                <p>Phone: +1 123-456-7890</p>
+            </div>
+            <div class="col-md-6">
+                <h4>About Cake Delights</h4>
+                <p>Cake Delights is your one-stop destination for delicious and beautifully crafted cakes. We believe in spreading joy and sweetness through our delightful creations. Order your favorite cakes with us and make every celebration special!</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script>
+        function addToYumbag(productName, price, quantity) {
+            // Retrieve existing cart items or initialize an empty array
+            const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+            // Add the selected cake to the cart
+            cartItems.push({ productName, price, quantity });
+
+            // Save the updated cart items to localStorage
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            alert(`Added ${quantity} ${productName}(s) to Yumbag!`);
+
+            // Redirect to the cart page
+            window.location.href = 'cart.html';
+        }
+    </script>
+<script>
+        function sendMessage() {
+            const messageInput = document.getElementById('message-input');
+            const messagesContainer = document.getElementById('messages');
+
+            const messageText = messageInput.value.trim();
+            if (messageText === '') {
+                return;
+            }
+
+            const messageElement = document.createElement('div');
+            messageElement.className = 'message';
+            messageElement.textContent = messageText;
+
+            messagesContainer.appendChild(messageElement);
+
+            // Clear the input box
+            messageInput.value = '';
+
+            // Scroll to the bottom of the messages container
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    </script>
+
+</body>
+</html>
+
