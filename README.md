@@ -2,7 +2,7 @@
 
 A responsive, interactive e-commerce storefront designed for a modern bakery. 
 
-This project was built with a strong emphasis on user interface (UI) design and mobile responsiveness, ensuring a seamless and visually appealing experience across desktops, tablets, and smartphones.
+This project was built with a strong emphasis on user interface (UI) design and mobile responsiveness, ensuring a seamless and visually appealing experience across desktops, and tablets.
 
 ## ✨ Features
 * **Responsive Layout:** Fluid design that adapts perfectly to any screen size using a mobile-first approach.
